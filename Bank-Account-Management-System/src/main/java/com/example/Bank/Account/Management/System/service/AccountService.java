@@ -13,17 +13,17 @@ public class AccountService {
     public Account CreateAccount(String accountnumber, String accountholder, double pin, double currentbalance){
         Account account = new Account(accountnumber, accountholder, pin, currentbalance);
         if (accountRepo.existsById(accountnumber)) {
-            throw new RuntimeException("Account with this number already exists");
+            throw new RuntimeException("Account with this number already exists.");
         }
         if (accountnumber == null) {
-            throw new IllegalArgumentException("ID must not be null");
+            throw new IllegalArgumentException("ID must not be null.");
         }
         return accountRepo.save(account);
     }
 
     public Account deposit(String accountnumber, double amount){
         if (amount <= 0) {
-            throw new IllegalArgumentException("Deposit amount must be positive");
+            throw new IllegalArgumentException("Deposit amount must be positive.");
         }
         Account account = accountRepo.findById(accountnumber).orElseThrow(()-> new RuntimeException("Account not fount"));
         account.deposit(amount);
