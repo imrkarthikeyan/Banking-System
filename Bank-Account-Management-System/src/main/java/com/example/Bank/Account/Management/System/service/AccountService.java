@@ -67,7 +67,7 @@ public class AccountService {
             return true;
         }
         else{
-            throw new RuntimeException("Invalid pin");
+            throw new RuntimeException("Invalid pin. check your pin");
         }
     }
 }
