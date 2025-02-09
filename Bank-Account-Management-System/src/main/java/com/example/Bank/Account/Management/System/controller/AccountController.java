@@ -48,6 +48,6 @@ public class AccountController {
     @DeleteMapping("/delete/{accountnumber}")
     public String deleteAccount(@PathVariable String accountnumber, @RequestParam double pin) {
         accountService.deleteAccount(accountnumber,pin);
-        return "Account deleted successfully.";
+        return "Account deleted successfully";
     }
 }
