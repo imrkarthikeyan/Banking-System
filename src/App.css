@@ -2,9 +2,34 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.form-design{
+  padding:30px 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.form-design input{
+  border: 2px solid rgba(38, 23, 5, 0.372);
+  border-radius: 3px;
+}
+
+.btns button{
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color:green;
+  border: none;
+  color: white;
+  margin: 5px;
+}
+
+.btns button:nth-child(6){
+  background-color: rgb(183, 5, 5);
 }
 
 @media (prefers-reduced-motion: no-preference) {
