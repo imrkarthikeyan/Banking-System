@@ -13,7 +13,7 @@ function App() {
     // Create Account
     const createAccount=async()=>{
         try{
-            const response=await fetch("http://localhost:8080/Account/create",{
+            const response=await fetch("https://banking-system-feny.onrender.com/Account/create",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({
@@ -41,7 +41,7 @@ function App() {
     // Deposit
     const deposit=async()=>{
         try{
-            const response=await fetch(`http://localhost:8080/Account/deposit/${accountNumber}?amount=${amount}`,{
+            const response=await fetch(`https://banking-system-feny.onrender.com/Account/deposit/${accountNumber}?amount=${amount}`,{
                 method: "POST",
             })
 
@@ -62,7 +62,7 @@ function App() {
     // Withdraw
     const withdraw=async()=>{
         try{
-            const response=await fetch(`http://localhost:8080/Account/withdraw/${accountNumber}?amount=${amount}&pin=${pin}`,{
+            const response=await fetch(`https://banking-system-feny.onrender.com/Account/withdraw/${accountNumber}?amount=${amount}&pin=${pin}`,{
                 method:"POST",
             });
 
@@ -83,7 +83,7 @@ function App() {
     // Transfer
     const transfer=async()=>{
         try{
-            const response=await fetch(`http://localhost:8080/Account/transfer?senderAccountnumber=${accountNumber}&receiverAccountnumber=${receiverAccount}&amount=${amount}&pin=${pin}`,{
+            const response=await fetch(`https://banking-system-feny.onrender.com/Account/transfer?senderAccountnumber=${accountNumber}&receiverAccountnumber=${receiverAccount}&amount=${amount}&pin=${pin}`,{
                 method:"POST",
         });
 
@@ -99,7 +99,7 @@ function App() {
     // Check Balance
     const checkBalance=async()=>{
         try{
-            const response = await fetch(`http://localhost:8080/Account/balance/${accountNumber}?pin=${pin}`,{
+            const response = await fetch(`https://banking-system-feny.onrender.com/Account/balance/${accountNumber}?pin=${pin}`,{
                 method: "GET",
             });
 
@@ -115,7 +115,7 @@ function App() {
     // Delete Account
     const deleteAccount=async()=>{
         try{
-            const response=await fetch(`http://localhost:8080/Account/delete/${accountNumber}?pin=${pin}`,{
+            const response=await fetch(`https://banking-system-feny.onrender.com/Account/delete/${accountNumber}?pin=${pin}`,{
                 method:"DELETE",
             });
 
