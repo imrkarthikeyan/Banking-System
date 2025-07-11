@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = "http://localhost:8080/Account";  // Backend URL
+const API_BASE_URL = "https://banking-system-feny.onrender.com/Account";  // Backend URL
 
 export const createAccount = (accountData) => {
     return axios.post(`${API_BASE_URL}/create`, accountData);
